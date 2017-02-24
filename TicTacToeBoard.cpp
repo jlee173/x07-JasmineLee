@@ -13,13 +13,26 @@ void TicTacToeBoard::toggleTurn()
 //Constructor sets an empty board and specifies it is X's turn first
 TicTacToeBoard::TicTacToeBoard()
 {
-
+	for(int row = 0; row < 3; row++)
+	{
+		for(int col =0; col < 3; col++)
+		{
+			board[row][col] = Blank;
+		}
+	}
+	turn = X;	
 }
 
 //Resets each board location to the Blank Piece value
 void TicTacToeBoard::clearBoard()
 {
-
+	for(int row = 0; row < 3; row++)
+	{
+		for(int col =0; col < 3; col++)
+		{
+			board[row][col] = Blank;
+		}
+	}	
 }
 
 /**

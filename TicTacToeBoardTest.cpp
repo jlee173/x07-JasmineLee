@@ -14,6 +14,14 @@ class TicTacToeBoardTest : public ::testing::Test
 		virtual void TearDown(){} //clean up after each test, (before destructor) 
 };
 
+TEST(TicTacToeBoardTest, turnIsNotX)
+{
+	TicTacToeBoard tttb;
+	tttb.clearBoard();
+	ASSERT_FALSE(tttb.placePiece(0,0) == X);		
+}
+
+
 TEST(TicTacToeBoardTest, sanityCheck)
 {
 	ASSERT_TRUE(true);
